@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Pauneh 🖤</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #090909;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.screen {
+    display: none;
+    animation: fadeIn 1s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #eeeeee;
+}
+
+.heart {
+    font-size: 75px;
+    animation: heartbeat 1.4s infinite;
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #ff3158;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,49,88,0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.small {
+    font-size: 14px;
+    color: #999;
+    margin-top: 25px;
+}
+
+.final {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp 5s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SCREEN 1 -->
+    <div class="screen active" id="screen1">
+        <div class="heart">🖤</div>
+
+        <h1>Hey Maa...</h1>
+
+        <p>
+            I know you're missing me today.
+            And I know this distance is not easy for us.
+        </p>
+
+        <button onclick="nextScreen(2)">
+            Open this, Baby 🖤
+        </button>
+
+        <div class="small">
+            Made especially for my Gunde ❤️‍🔥
+        </div>
+    </div>
+
+
+    <!-- SCREEN 2 -->
+    <div class="screen" id="screen2">
+
+        <h2>For My Pauneh 🖤</h2>
+
+        <p>
+            If I could, I would be beside you right now.
+            <br><br>
+
+            I would hold you close,
+            look at you,
+            and tell you that everything is going to be okay.
+            <br><br>
+
+            I miss you too, Syg.
+            More than I sometimes know how to say.
+        </p>
+
+        <button onclick="nextScreen(3)">
+            One more thing... 👀
+        </button>
+
+    </div>
+
+
+    <!-- SCREEN 3 -->
+    <div class="screen" id="screen3">
+
+        <div class="heart">🥺🖤</div>
+
+        <h2>Close your eyes, Baby...</h2>
+
+        <p>
+            Just for 5 seconds.
+            <br><br>
+
+            Imagine I'm standing right in front of you.
+            <br><br>
+
+            Imagine my arms around you.
+            <br><br>
+
+            Imagine me saying...
+            <br><br>
+
+            <strong>
+                "I missed you too, Maa."
+            </strong>
+        </p>
+
+        <button onclick="nextScreen(4)">
+            Open your eyes 🖤
+        </button>
+
+    </div>
+
+
+    <!-- SCREEN 4 -->
+    <div class="screen" id="screen4">
+
+        <div class="heart">❤️‍🔥</div>
+
+        <h2>Listen to me, Gunde.</h2>
+
+        <p class="final">
+
+            Distance can keep us apart physically...
+            <br><br>
+
+            But it can never change
+            what you mean to me.
+            <br><br>
+
+            No matter how many kilometres are between us,
+            <br>
+            you're still the person I think about.
+            <br><br>
+
+            You're still my Baby.
+            <br>
+            You're still my Maa.
+            <br>
+            You're still my Pauneh.
+            <br><br>
+
+            And I'm still your husband. 🖤
+
+        </p>
+
+        <button onclick="nextScreen(5)">
+            I miss you too 🥺
+        </button>
+
+    </div>
+
+
+    <!-- SCREEN 5 -->
+    <div class="screen" id="screen5">
+
+        <div class="heart">🫂</div>
+
+        <h1>Until I Can Hold You Again...</h1>
+
+        <p class="final">
+
+            Don't be sad, Syg.
+            <br><br>
+
+            One day this distance
+            will just be a memory.
+            <br><br>
+
+            And when I finally get to hold you,
+            I'm not letting go so easily. 🖤
+            <br><br>
+
+            I love you, Baby.
+            <br>
+            Always.
+
+        </p>
+
+        <div class="small">
+            — Your Husband 🖤
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function nextScreen(number) {
+
+    document.querySelectorAll(".screen").forEach(function(screen) {
+        screen.classList.remove("active");
+    });
+
+    document.getElementById("screen" + number).classList.add("active");
+
+    createHearts();
+}
+
+
+function createHearts() {
+
+    for (let i = 0; i < 8; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "floating-heart";
+        heart.innerHTML = Math.random() > 0.5 ? "🖤" : "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+            heart.remove();
+        }, 6000);
+    }
+}
+
+</script>
+
+</body>
+</html>
